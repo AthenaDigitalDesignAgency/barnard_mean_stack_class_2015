@@ -1,0 +1,213 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// alert('hi');
+
+	// var cat = prompt('hey what\'s your cat\'s name?');
+
+	// alert(cat);
+
+	// var doYouWantADog = confirm('do you want a dog?');
+
+	// if (doYouWantADog == true){
+	// 	alert('cool I can give you one');
+	// }else{
+	// 	alert('do you want to cat instead?');
+	// }
+
+	// var messesAge = 3;
+
+	// var catFiveYears = messesAge + 5;
+
+	// alert('in five years, my cat will be ' + (messesAge + 5) );
+
+	// var myAge = parseInt(prompt('how old are you now?'));
+
+	// alert('in one year you\'ll be ' + (myAge + 1) );
+
+	// if (myAge != 29){
+	// 	alert('you are not 29');
+	// }
+
+	// document.write('hi');
+
+
+	// //exercise
+	// var eatSteak = confirm("do you eat steak?");
+	// if (eatSteak){
+	// 	document.write("Here's a steak");
+	// }else{
+	// 	document.write("Here's a tofu stir fry!");
+	// }
+
+	// //bonus
+	// var year = prompt('What year were you born?');
+
+	// year = parseInt(year);
+
+	// if (year < 1987){
+	// 	alert("you're older than Pavan");
+	// }elseif(year > 1987){
+	// 	alert("you're younger than Pavan");
+	// }else{
+	// 	alert("you're around the same age as Pavan");
+	// }
+
+
+	// switch (5) {
+	//     case 0:
+	//         day = "Sunday";
+	//         break;
+	//     case 1:
+	//         day = "Monday";
+	//         break;
+	//     case 2:
+	//         day = "Tuesday";
+	//         break;
+	//     case 3:
+	//         day = "Wednesday";
+	//         break;
+	//     case 4:
+	//         day = "Thursday";
+	//         break;
+	//     case 5:
+	//         day = "Friday";
+	//         break;
+	//     case 6:
+	//         day = "Saturday";
+	//         break;
+	// }
+
+	// if (true == true){
+ //        alert('hi')
+ //    }else{
+ //        alert('bye')
+ //    }
+
+ //    if (false == false){
+ //        alert('dude')
+ //    }else{
+ //        alert('nope')
+ //    }
+
+ //    if ("4" == 4){
+ //        alert('barnard')
+ //    }else{
+ //        alert('marford - I made this up')
+ //    }
+
+ //    if ("4" === 4){
+ //        alert('barnard')
+ //    }else{
+ //        alert('marford - I made this up')
+ //    }
+
+ //    if (true){
+ //        alert('goo goo dolls')
+ //    }else{
+ //        alert('vanilla ice')
+ //    }
+
+ //    if (false){
+ //        alert('the neighborhood')
+ //    }else{
+ //        alert('one direction')
+ //    }
+
+ //    if (("5" + "5") == "55"){
+ //        alert('tofu')
+ //    }else{
+ //        alert('soybean')
+ //    }
+
+ //    if ((6 + "5") == "65"){
+ //        alert('richard')
+ //    }else{
+ //        alert('branson')
+ //    }
+
+
+ // var payingAttention = true;
+
+ // while (payingAttention){
+ // 	payingAttention = confirm('are you paying attention?');
+ // }
+	
+
+ // while (4 < 3){
+ // 	alert('hi');
+ // }
+	
+
+ //Problem 1
+             //ask the user for a number, if it's above 5, keep asking the user for a number, if not, then alert "you lost!!!"
+
+var num  = parseInt(prompt('giv eme a num'));
+
+while (num > 5){
+	num  = parseInt(prompt('giv eme a num'));
+}
+
+alert('you lost');
+
+
+
+
+
+
+
+
+
+ //Problem 2
+     //ask the user for a letter
+
+     //if the letter is equal to either A, B, or C then keep going. If not then stop the loop. 
+
+     //make your program case insensitive by using toLowerCase() - go here: http://www.w3schools.com/jsref/jsref_tolowercase.asp
+
+var letter  = (prompt('guess a letter')).toLowerCase();
+var loop;
+
+if (letter == 'a'){
+	loop = true;
+}elseif(letter == 'b'){
+	loop = true;
+}elseif(letter == 'c'){
+	loop = true;
+}else{
+	loop = false;
+}
+
+while(loop){
+	var letter  = (prompt('guess a letter')).toLowerCase();
+
+	if (letter == 'a'){
+		loop = true;
+	}elseif(letter == 'b'){
+		loop = true;
+	}elseif(letter == 'c'){
+		loop = true;
+	}else{
+		loop = false;
+	}
+}
+
+ //Bonus using arrays (we haven't gone over this yet)
+     //start with this array 
+     //var pets = ["cats", "dogs", "rabbits"]
+
+     //ask the user to guess a type of animal
+         //if the animal is in the pets array then alert 'You won!'
+         // use the indexOf method http://www.w3schools.com/jsref/jsref_indexof_array.asp - the indexOf method returns -1 if it's not in the array
+
+
+ var animals = [];
+
+
+</script>
+</body>
+</html>
