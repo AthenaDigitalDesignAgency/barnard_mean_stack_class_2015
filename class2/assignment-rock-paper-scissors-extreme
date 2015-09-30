@@ -1,0 +1,41 @@
+Homework (you do):
+	Make an extreme rock paper scissors game that keeps running until the user wants to quit. It will look like this when done: https://youtu.be/z6YjKudahCE
+
+		- initialize a variable at the top called userInput
+
+		- inside a while loop that uses the following condition: userInput doesn't equal to a string 'quit'
+			- prompt the user with this question: "Please choose one of these options: rock, paper, scissors. If you want to stop playing then please type in quit" and capture it into the userInput variable
+
+		- you can use switch statements or if/elseif/else conditional logic
+
+		- if the user types in quit and clicks ok then the game should stop
+
+		- keep score and everytime you prompt the user to "Please choose one of these..." then tell the user their score
+
+		- if the user quits, then display the user's score on the page using document.write
+
+		- add this code to your github as a new repository called rock_paper_scissors_fun
+			- if you have trouble with github, then make a gist instead (doesn't require any installation): https://gist.github.com/
+
+			- submit your homework here: 
+				use: "week 1 extreme rock paper scissors" for the "name of assignment" question
+
+				https://docs.google.com/forms/d/1D8mazyOoKKOn7Kq5DHJWo6nSDyTOo94jxoPKGxDu5Y8/viewform?usp=send_form
+
+	Bonus 1: count the user's ties
+		- count everytime the user ties and display that when your game prompts the user to "Please choose one of these..."
+		- also display the user's ties when the user quits
+
+	Bonus 2: put in validation, so if the user doesn't type in rock, paper scissors, string or macbook then your prompt with "Please choose one of these options: rock, paper, scissors..." comes up again
+
+	Bonus 3: When the user quits, make a nice sound play if the user has a score greater than 0, make a bad sound play if the user has a score of 0 or below. Use the first answer to this question: http://stackoverflow.com/questions/9419263/playing-audio-with-javascript
+
+		- you can use sounds from here: http://soundbible.com/
+		- you need to download them and keep them included in the same folder as your javascript file in order to use them
+
+	Bonus 4: add in string, and macbook to the options available
+		- string beats rock and paper but gets beaten by scissors and macbook
+
+		- macbook beats paper, string but gets beaten by rock and scissors
+
+		- alternatively you can use envelope, rubber band and tape + come up with your own rules
