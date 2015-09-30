@@ -67,20 +67,96 @@
 	// 	alert('I like that band too!!!');
 	// }
 
-	var word = 'water';
-	undefined
-	var wordArray = word.split('');
-	undefined
-	wordArray
-	["w", "a", "t", "e", "r"]
-	wordArray.indexOf('z')
-	-1
-	wordArray.indexOf('t')
-	2
-	wordArray.splice(2,1)
-	["t"]
-	wordArray
-	["w", "a", "e", "r"]
+	// var word = 'water';
+	// undefined
+	// var wordArray = word.split('');
+	// undefined
+	// wordArray
+	// ["w", "a", "t", "e", "r"]
+	// wordArray.indexOf('z')
+	// -1
+	// wordArray.indexOf('t')
+	// 2
+	// wordArray.splice(2,1)
+	// ["t"]
+	// wordArray
+	// ["w", "a", "e", "r"]
+
+	//Exercise
+		var gameboy = [ 'Game Boy', 'nintendo', 149.99 ];
+		var pokemon = [ 'Pokemon Blue', 'nintendo', 49.99 ];
+		var tetris = [ 'Tetris', 'SEGA', 49.99 ];
+
+		// How would you:
+
+		// Without touching the above code:
+		// * Change the name of the gameboy to be `Game Boy Color`.
+		gameboy[0] = 'Game Boy Color';
+
+		// * Change the company of the pokemon game to be capitalized.
+		pokemon[1] = pokemon[1].toUpperCase();
+		pokemon[1] = 'Nintendo';
+
+		// * Remove the price of Tetris and store it in a variable oldPrice, then put in a new price 9000.99 into the tetris array.
+		var oldPrice = tetris.pop();
+		tetris.push(9000.99)
+
+		// * Set the company of the tetris array to Nintendo instead of SEGA
+
+		tetris[1] = 'Nintendo';
+
+
+
+
+
+
+
+
+
+
+	//Exercise
+
+		// ### Nested Arrays - 20 minutes
+
+		//PART ONE
+			// Create a new variable called cart. Add the gameboy, pokemon, and tetris arrays into the cart array.
+
+			// How would you:
+
+			// * Access the name of the pokemon game through the cart variable.
+			// * Access the price of the tetris game.
+			// * Change the price of the tetris game to be 9012.
+			// * Change the name of the Game Boy in the cart to Game Boy Advance.
+
+			var gameboy = [ 'Game Boy', 'nintendo', 149.99 ];
+			var pokemon = [ 'Pokemon Blue', 'nintendo', 49.99 ];
+			var tetris = [ 'Tetris', 'SEGA', 49.99 ];
+
+			var cart = [gameboy, pokemon, tetris];
+
+			cart[1][0];
+			cart[2][2];
+			cart[2][2] = 9012;
+			cart[0][0] = 'Game Boy Advance';
+
+		//PART TWO:
+			// * Look at the original variables and look at the values stored in the cart array.
+			// * Did changing the array values in the cart array affect the values of the original arrays?
+			// * Why?
+
+		// Solution
+
+			var cart = [gameboy, pokemon, tetris];
+			//cart.push(gameboy, pokemon, tetris)
+
+			cart[1][0]; //name of the pokemon game
+			cart[2][2] //price of the tetris game
+			cart[2][2] = 9012; 
+
+		// **Bonus Solution**
+			// When we use a variable we are referencing the original value stored there. Cart is just an array, holding references to the three original arrays. If we change the arrays within cart it is the same as changing the original arrays directly.
+
+			// slice will give us a copy of the array -> safer.
 
 
 
