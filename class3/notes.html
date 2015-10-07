@@ -59,7 +59,7 @@
 		var counter = 0;
 		var consonantCounter = 0;
 
-		while (counter < (totalWord.length -1)){ //14 - 1 =13
+		while (counter <= (totalWord.length -1)){ //14 - 1 =13
 			//debugger;
 			if (vowels.indexOf(totalWord[counter]) == -1){
 				//debugger;
@@ -84,22 +84,22 @@
 
 		// use the function to print true/false to the console with this array: [f, g, h, r, i], this array: [t, y, b, a, c, v] and this one: [t, y]
 
-		// var isThereAVowelInIt = function(arrayOfLetters){
+		var isThereAVowelInIt = function(arrayOfLetters){
 			
-		// 	var vowels = ['a', 'e', 'i', 'o', 'u'];
-		// 	var counter = 0;
+			var vowels = ['a', 'e', 'i', 'o', 'u'];
+			var counter = 0;
 
-		// 	while (counter < (arrayOfLetters.length -1)){
-		// 		if (vowels.indexOf(arrayOfLetters[counter]) != -1){
-		// 			return true;
-		// 		}
-		// 		counter++;
-		// 	}
+			while (counter <= (arrayOfLetters.length -1)){
+				if (vowels.indexOf(arrayOfLetters[counter]) != -1){
+					return true;
+				}
+				counter++;
+			}
 
-		// 	return false;
-		// }
+			return false;
+		}
 
-		// alert(isThereAVowelInIt(['b', 'c']))
+		alert(isThereAVowelInIt(['b', 'c', 'a']))
 
 </script>
 
