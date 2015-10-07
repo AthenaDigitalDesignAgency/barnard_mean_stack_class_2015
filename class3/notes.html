@@ -52,27 +52,30 @@
 
 		//Is your code DRY? If not, then try to make it dry
 
-	// var getNumOfConsonantsOfTwoStrings = function(a,b){
-	// 	var totalWord = a + b;
-	// 	var vowels = ['a', 'e', 'i', 'o', 'u'];
-	// 	var counter = 0;
-	// 	var consonantCounter = 0;
+	//barnard, college
+	var getNumOfConsonantsOfTwoStrings = function(a,b){
+		var totalWord = a + b; //barnardcollege //14
+		var vowels = ['a', 'e', 'i', 'o', 'u'];
+		var counter = 0;
+		var consonantCounter = 0;
 
-	// 	while (counter < (totalWord.length -1){
-	// 		if (vowels.indexOf(totalWord[counter]) == -1){
-	// 			consantCounter++;
-	// 		}
-	// 		counter++;
-	// 	}	
+		while (counter < (totalWord.length -1)){ //14 - 1 =13
+			//debugger;
+			if (vowels.indexOf(totalWord[counter]) == -1){
+				//debugger;
+				consonantCounter++;
+			}
+			counter++;
+		}	
 
-	// 	return consonantCounter;
+		return consonantCounter;
 
-	// }
+	}
 
-	// var firstWord = prompt('give me a word.');
-	// var secondWord = prompt('give me another word.');
+	var firstWord = prompt('give me a word.');
+	var secondWord = prompt('give me another word.');
 
-	// getNumOfConsonantsOfTwoStrings('bowling', 'fun');
+	getNumOfConsonantsOfTwoStrings(firstWord, secondWord);
 
 
 
