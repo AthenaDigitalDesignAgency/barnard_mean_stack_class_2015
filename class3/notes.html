@@ -53,29 +53,29 @@
 		//Is your code DRY? If not, then try to make it dry
 
 	//barnard, college
-	var getNumOfConsonantsOfTwoStrings = function(a,b){
-		var totalWord = a + b; //barnardcollege //14
-		var vowels = ['a', 'e', 'i', 'o', 'u'];
-		var counter = 0;
-		var consonantCounter = 0;
+	// var getNumOfConsonantsOfTwoStrings = function(a,b){
+	// 	var totalWord = a + b; //barnardcollege //14
+	// 	var vowels = ['a', 'e', 'i', 'o', 'u'];
+	// 	var counter = 0;
+	// 	var consonantCounter = 0;
 
-		while (counter <= (totalWord.length -1)){ //14 - 1 =13
-			//debugger;
-			if (vowels.indexOf(totalWord[counter]) == -1){
-				//debugger;
-				consonantCounter++;
-			}
-			counter++;
-		}	
+	// 	while (counter <= (totalWord.length -1)){ //14 - 1 =13
+	// 		//debugger;
+	// 		if (vowels.indexOf(totalWord[counter]) == -1){
+	// 			//debugger;
+	// 			consonantCounter++;
+	// 		}
+	// 		counter++;
+	// 	}	
 
-		return consonantCounter;
+	// 	return consonantCounter;
 
-	}
+	// }
 
-	var firstWord = prompt('give me a word.');
-	var secondWord = prompt('give me another word.');
+	// var firstWord = prompt('give me a word.');
+	// var secondWord = prompt('give me another word.');
 
-	getNumOfConsonantsOfTwoStrings(firstWord, secondWord);
+	// getNumOfConsonantsOfTwoStrings(firstWord, secondWord);
 
 
 
@@ -84,22 +84,165 @@
 
 		// use the function to print true/false to the console with this array: [f, g, h, r, i], this array: [t, y, b, a, c, v] and this one: [t, y]
 
-		var isThereAVowelInIt = function(arrayOfLetters){
+		// var isThereAVowelInIt = function(arrayOfLetters){
 			
-			var vowels = ['a', 'e', 'i', 'o', 'u'];
-			var counter = 0;
+		// 	var vowels = ['a', 'e', 'i', 'o', 'u'];
+		// 	var counter = 0;
 
-			while (counter <= (arrayOfLetters.length -1)){
-				if (vowels.indexOf(arrayOfLetters[counter]) != -1){
-					return true;
-				}
-				counter++;
-			}
+		// 	while (counter <= (arrayOfLetters.length -1)){
+		// 		if (vowels.indexOf(arrayOfLetters[counter]) != -1){
+		// 			return true;
+		// 		}
+		// 		counter++;
+		// 	}
 
-			return false;
-		}
+		// 	return false;
+		// }
 
-		alert(isThereAVowelInIt(['b', 'c', 'a']))
+		// alert(isThereAVowelInIt(['b', 'c', 'a']))
+
+		// Objects -------
+
+		//objects are boxes - inside are names pointing to values
+
+		// var ken = {
+		// 	hair: 'black',
+		// 	shirt: 'blue long sleeve shirt',
+		// 	'favorite color': 'purple',
+		// 	hero: 'bruce lee'
+		// }
+
+
+		// ken.hair
+		// "black"
+
+		// ken['hair']
+		// "black"
+
+		// ken.favorite color
+		// VM482:2 Uncaught SyntaxError: Unexpected identifier(…)InjectedScript._evaluateOn @ VM272:904InjectedScript._evaluateAndWrap @ VM272:837InjectedScript.evaluate @ VM272:693
+
+		// ken['favorite color']
+		// "purple"
+
+		// //Exercise One
+		// 	var bands = {
+		// 	  'blink 182': "what's my age again",
+		// 	  'backstreet boys': "everybody",
+		// 	  'depeche mode': ['people are people', 'lilian', 'suffer well', 'strange love']
+		// 	}
+
+		// 	bands['depeche mode'] //returns an array
+
+		// 	//loop over bands['depeche mode'] and console.log all the values
+
+		// 	//by Tin
+		// 	var songsByDepecheMode = bands['depeche mode'];
+		// 	var i = 0;
+		// 	while (i < songsByDepecheMode.length)
+		// 	{
+		// 		console.log (songsByDepecheMode[i]);
+		// 		i++;
+		// 	}
+
+		// // Exercise Two
+		// 	//objects can have objects in them
+
+		// 	  var house = {
+		// 	    kitchen: {
+		// 	      color: "white",
+		// 	      fridge: true,
+		// 	      dishwasher: false
+		// 	    }
+		// 	  }
+
+		// 	  //how do I return the value of fridge
+		// 	  //how do I return the value of dishwasher
+
+		// 	  //by Jenna
+		// 	  house.kitchen.fridge
+		// 	  house.kitchen.dishwasher
+
+		// // Exercise Three
+		// 	var bankAccount = {
+		// 	  number: 555555,
+		// 	  balance: {
+		// 	    checking: 6.30,
+		// 	    savings: 10.09,
+		// 	    investments: {
+		// 	      cocaCola:  100.00,
+		// 	      tesla: 200.00,
+		// 	    }
+		// 	  }
+		// 	}
+
+		// 	//fill in the variables with object calls and console.log them out after
+
+		// 	var checkingBalance = bankAccount.balance.checking;
+		// 	var savingsBalance = bankAccount.balance.savings;
+		// 	var teslaBalance = bankAccout.balance.investments.tesla;
+
+		// 	console.log(checkingBalance);
+		// 	console.log(savingsBalance);
+		// 	console.log(teslaBalance);
+
+
+
+		//mega object
+
+		var pokemon = {
+		  level: 4,
+		  name: 'Charmander',
+		  type: 'fire',
+		  moves: ['ember', 'scratch', 'growl'],
+		  hp: 100,
+
+		  takeDamage: function(amount){
+		    this.hp -= amount;
+		    if (this.hp <= 0) {
+		      this.hp = 0;
+		      return 'Your pokemon fainted'
+		    }
+		    return 'Hang in there' + this.name + '!';
+		  },
+
+		  visitPokeCenter: function() {
+		    this.hp = 100;
+		  },
+
+		  isFainted: function() {
+		    if (this.hp <= 0) {
+		        return [true, "No, take " + this.name + " to the PokeCenter now!"];
+		    } else {
+		        return [false, "He's all good."];
+		    }
+		  },
+
+		  randomMove: function() {
+		    var randomIndex = Math.floor(Math.random() * this.moves.length);
+		    return this.moves[randomIndex];
+		  },
+
+		  attack: function() {
+		    return this.name + " used " + this.randomMove();
+		  }
+
+		};
+
+		
+		pokemon.name
+		"Charmander"
+		
+		pokemon.hp
+		100
+		
+		pokemon.moves
+		["ember", "scratch", "growl"]
+		pokemon.takeDamage(10)
+		"Hang in thereCharmander!"
+		pokemon.hp
+		90
+
 
 </script>
 
