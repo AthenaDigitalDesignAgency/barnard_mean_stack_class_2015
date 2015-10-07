@@ -190,58 +190,117 @@
 
 		//mega object
 
-		var pokemon = {
-		  level: 4,
-		  name: 'Charmander',
-		  type: 'fire',
-		  moves: ['ember', 'scratch', 'growl'],
-		  hp: 100,
+		// var pokemon = {
+		//   level: 4,
+		//   name: 'Charmander',
+		//   type: 'fire',
+		//   moves: ['ember', 'scratch', 'growl'],
+		//   hp: 100,
 
-		  takeDamage: function(amount){
-		    this.hp -= amount;
-		    if (this.hp <= 0) {
-		      this.hp = 0;
-		      return 'Your pokemon fainted'
-		    }
-		    return 'Hang in there' + this.name + '!';
-		  },
+		//   takeDamage: function(amount){
+		//     this.hp -= amount;
+		//     if (this.hp <= 0) {
+		//       this.hp = 0;
+		//       return 'Your pokemon fainted'
+		//     }
+		//     return 'Hang in there' + this.name + '!';
+		//   },
 
-		  visitPokeCenter: function() {
-		    this.hp = 100;
-		  },
+		//   visitPokeCenter: function() {
+		//     this.hp = 100;
+		//   },
 
-		  isFainted: function() {
-		    if (this.hp <= 0) {
-		        return [true, "No, take " + this.name + " to the PokeCenter now!"];
-		    } else {
-		        return [false, "He's all good."];
-		    }
-		  },
+		//   isFainted: function() {
+		//     if (this.hp <= 0) {
+		//         return [true, "No, take " + this.name + " to the PokeCenter now!"];
+		//     } else {
+		//         return [false, "He's all good."];
+		//     }
+		//   },
 
-		  randomMove: function() {
-		    var randomIndex = Math.floor(Math.random() * this.moves.length);
-		    return this.moves[randomIndex];
-		  },
+		//   randomMove: function() {
+		//     var randomIndex = Math.floor(Math.random() * this.moves.length);
+		//     return this.moves[randomIndex];
+		//   },
 
-		  attack: function() {
-		    return this.name + " used " + this.randomMove();
+		//   attack: function() {
+		//     return this.name + " used " + this.randomMove();
+		//   }
+
+		// };
+
+		
+		// pokemon.name
+		// "Charmander"
+		
+		// pokemon.hp
+		// 100
+		
+		// pokemon.moves
+		// ["ember", "scratch", "growl"]
+		// pokemon.takeDamage(10)
+		// "Hang in thereCharmander!"
+		// pokemon.hp
+		// 90
+
+		// Exercises with Objects -------
+
+		```
+		//exercise one
+		//finish the totalCash function, and after you're done invoke it via the object
+
+		var cashRegister = {
+		  singles:    30,
+		  fivers:     8,
+		  tens:       3,
+		  twenties:   2,
+
+		  totalCash:  function () {
+			//return the total cash in the cashRegister
+			return 1 * this.singles +
+			       5 * this.fivers  +
+			      10 * this.tens    +
+			      20 * this.twenties;
 		  }
+		};
+		
+		cashRegister.totalCash(); //part two
 
+		//exercise two 
+		//finish the tick function, 
+		//and after you're done invoke it via the object until the boom function get's invoked.
+
+		var timeBomb = {
+		  secondsLeft: 5,
+		  tick: function () {
+		    // TODO:
+		    //	Decrement the timer
+		    //	and when it hits zero
+		    //	have it explode via the boom property of the timeBomb object
+		    //	and reset the secondsLeft property
+
+			if (this.secondsLeft > 0){
+				this.secondsLeft--;
+                //console.log(this.secondsLeft); //just to check
+                
+                if (this.secondsLeft == 0){
+                	this.secondsLeft = 5;
+                    this.boom();
+                }
+			}
+		  },
+		  boom: function () {
+		    alert("KaBOoOoM!");
+		  }
 		};
 
+		//part two
+		timeBomb.tick();
+		timeBomb.tick();
+		timeBomb.tick();
+		timeBomb.tick();
+		timeBomb.tick();
 		
-		pokemon.name
-		"Charmander"
-		
-		pokemon.hp
-		100
-		
-		pokemon.moves
-		["ember", "scratch", "growl"]
-		pokemon.takeDamage(10)
-		"Hang in thereCharmander!"
-		pokemon.hp
-		90
 
 
 </script>
