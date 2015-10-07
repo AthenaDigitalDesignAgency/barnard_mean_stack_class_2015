@@ -1,0 +1,73 @@
+----HOMEWORK: Hangman via Prompts----
+
+Objectives:
+- ask the user to guess a random word from an array
+- the user has a limited amount of guesses (word length + 4)
+- the user can see the word as it gets built and can see the number of guesses left
+- Use functions to keep your code DRY (don't repeat yourself)
+
+* These instructions are meant to guide you. Your end goal is to make the game look like this: https://youtu.be/ViVTNTKblV0 *
+
+- Use a variable called words to store an array that has words that a user may have to guess
+- Use a variable called word that contains the word that the game will use
+- Use a variable called displayWord that contains the word that gets displayed to the user on each prompt (if the word was blue, then the user might see __ue)
+- Use a variable called chancesUsed to store the number of tries a user has left
+- Use a variable called totalChances to store the total chances a user has
+- Use a variable called correct that stores the number of correct answers the user got
+- Use a variable called lettersOfWord to store an array of letters that the word has
+
+- Make a function called setRandomWord
+	- that will choose a random word out of that array of words 
+	- use this random word for the game
+	
+- Make a function called initialSetupForDisplayWord that takes one argument (will be a word)
+	- if the word is apple, it will return this string: "_____"
+	- basically it will replace every letter in the word with _
+
+- Use a prompt to ask the user to guess a letter (this will be encapsulated into a function called promptUser)
+	- you will use the initialSetupForDisplayWord to do this, and the 
+
+	The prompt will end up looking like this:
+		"So far you have: ___. Guess a letter please. Type 'quit' to quit playing. You have 7 chances left!"
+
+- Put in validation to make sure the user's input is a letter and not a word (anything over 1 letter is a word in our case)
+promptUser(c, w)
+
+- If the letter the user guesses is in the word then 
+	- the next prompt should look like this "So far you have: _a_. Guess a letter please. Type 'quit' to quit playing. You have 7 chances left!"
+		- the 7 would be totalChances - chancesUsed 
+
+	- add one to the correct variable
+	- call a function called rebuildDisplayWord which takes in three arguments: index, wrd, dispwrd
+		- index would be the index of the user's guess in the lettersOfWord
+		- wrd would be the word variable
+		- dispwrd would be the displayWord variable
+
+		- the function would return what displayword should now look like
+
+		- you would replace the old value of displayWord with this new value
+
+	- remove that letter that was guessed from the lettersOfWord array
+
+	- call the promptUser function, while  displayWord != word
+
+- If the letter is not in the word then
+	- add one to the chancesUsed, and call the promptUser function again.
+
+- If chancesUsed == totalChances
+	then tell the user that they lost
+
+- Let the user quit by typing in 'quit'
+
+- add this code to your github as a new repository called hangman_fun
+	- if you have trouble with github, then make a gist instead (doesn't require any installation): https://gist.github.com/
+
+	- submit your homework here: 
+		use: "week 2 hang man" for the "name of assignment" question
+
+		https://docs.google.com/forms/d/1D8mazyOoKKOn7Kq5DHJWo6nSDyTOo94jxoPKGxDu5Y8/viewform?usp=send_form
+
+//Bonus
+- Let the user replay the game 
+	- you can use location.reload(); to refresh the page
+- Organize your code to be inside of an object which gets stored inside a variable called game. Have a play property that points to a function that executes the game. Invoke your game on page load by doing game.play(); after your object code.
