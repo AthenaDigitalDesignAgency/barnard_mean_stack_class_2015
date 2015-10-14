@@ -1,0 +1,48 @@
+watch these and slack me any questions you have about them:
+
+	// All screencasts are 5 minutes long max. The first two are optional, but I urge everyone to watch them.
+
+	// - OPTIONAL (TOTAL: 15 minutes):
+	// 	- part 1: html of tic tac toe: DONE!
+	// 		http://screencast.com/t/gVO69LzuDW1T
+	// 	- part 2: using box model and floating for tic tac toe:
+	// 		http://screencast.com/t/LS9vNbyWTZ		DONE!
+	// 	- part 3 styling the tic tac toe board:
+	// 		http://screencast.com/t/9npBPXtDzSC		DONE!
+
+	// - GOOD TO GO OVER - BUT NOT NECESSARY:
+	// 	GOING OVER PREVIOUS CONCEPTS
+	// 		- part 4 finding a bug and fixing it with debugger - part 1
+	// 			http://screencast.com/t/u2aR233Bbonh
+	// 		- part 5 finding a bug and fixing it with debugger - part 2
+	// 			http://screencast.com/t/IaXFyfgx0o
+	// 		- part 6 fixing a bad practice AND going over event handlers AND going over callbacks 
+	// 			http://screencast.com/t/9SZmwloI
+	// 		- part 7 going over loading the javascript
+	// 			http://screencast.com/t/DD7BsbFsyYH
+	// 			Read this:
+	// 				http://stackoverflow.com/questions/588040/window-onload-vs-document-onload
+
+	// - NECESSARY:
+	// 	GOING OVER NEW CONCEPTS (20 minutes)
+	// 	- tic tac toe winning formula part 1
+	// 		http://screencast.com/t/TBpojJBTng
+
+	// 	- tic tac toe winning formula part 2 
+	// 		http://screencast.com/t/oCLksTSRhh
+
+	// 	- tic tac toe winning formula part 3
+	// 		http://screencast.com/t/l6kS9kZP6p
+
+	// 	- tic tac toe winning formula part 4
+	// 		http://screencast.com/t/fWogR8x9BLI3
+	// 		- answer why did it do that
+
+	// 	-  tic tac toe winning formula part 5
+	// 		http://screencast.com/t/jcSoHmJvc0
+	// 			- I forgot to put the bottom code block into the nested for loop
+	// 			- what happens if it stays the way it does?
+	// 			- why do we need it in the nested for loop?
+	// 				if ((comboCountX == 3) || (comboCountO == 3)){
+	// 					alert('you won')
+	// 				}
