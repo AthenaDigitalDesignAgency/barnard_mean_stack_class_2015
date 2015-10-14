@@ -1,0 +1,52 @@
+<!-- do we have class the day before thanksgiving -->
+<!-- give syllabus in slack -->
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	//Objectives:
+	// 1. students will understand how to use constructor functions to create objects.
+	// 2. students will understand be able to identify what a variable equals to based on JavaScript Scope.
+	// 3. students will understand how the window and document works in js
+	// 4. students will be able to use jQuery to make their webpages interactive
+	// 5. students will be ready to do their first project for this class - a game 
+
+
+	//constructor function
+	var F = function(){
+		this.name = 'ted';
+	};
+
+	var a = new F();
+
+	var b = new F();
+
+	var Dessert = function(nme, ingrdnts, rating) {
+		this.name = nme;
+		this.ingredients = ingrdnts;
+		this.ratingOutOfTen = rating;
+		this.chancePavanWillEat = function(){
+			return this.ratingOutOfTen * 5;
+		}
+	}
+
+	var puddingCake = new Dessert('chocolate pudding cake', ['chocolate', 'pudding', 'cake'], 7);
+	var vanillaPuddingCake = new Dessert('vanilla pudding cake', ['vanilla', 'pudding', 'cake'], 6);
+
+	puddingCake
+	vanillaPuddingCake
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
