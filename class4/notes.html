@@ -9,7 +9,7 @@
 <script type="text/javascript">
 	//Objectives:
 	// 1. students will understand how to use constructor functions to create objects.
-	// 2. students will understand be able to identify what a variable equals to based on JavaScript Scope.
+	// 2. students will understand how to identify what a variable equals to based on JavaScript Scope.
 	// 3. students will understand how the window and document works in js
 	// 4. students will be able to use jQuery to make their webpages interactive
 	// 5. students will be ready to do their first project for this class - a game 
@@ -36,11 +36,167 @@
 	var puddingCake = new Dessert('chocolate pudding cake', ['chocolate', 'pudding', 'cake'], 7);
 	var vanillaPuddingCake = new Dessert('vanilla pudding cake', ['vanilla', 'pudding', 'cake'], 6);
 
-	puddingCake
-	vanillaPuddingCake
+	puddingCake;
+	vanillaPuddingCake;
 
 
 
+	//YOU DO- 15 minutes
+		/*
+			For those who don't remember (or choose to forget), Tamagotchis were "digital pets" that you could carry around with you and feed them, clean up after them, pet them, and try to keep them happy.
+
+			Make a Tamagotchi constructor. Give it the following properties:
+			1. a hungry property (initially false)
+			2. a sick property (initially false)
+			3. an age of 0
+
+			and give it the following methods:
+
+			feed() - if hungry is true, print "That was yummy!" and set hungry to false. If hungry is false, print "No thanks, I'm full." and set hungry to true.
+			sleep() - prints out "zzzzzzz" (use as many z's as you want)
+			medicate() - if sick is true, print "I feel much better!" and set sick to false. If sick is false, print "No thanks, I feel fine." and set sick to true.
+			increaseAge() - increase the age by one and print "Happy Birthday to me! I am " + age + " years old!"
+			Now make a variable named dog that is set to a new Tamagotchi.
+
+			Add the following methods to it:
+			1. bark() - prints out "ruff ruff
+			2. goOutside() - prints out "I own that tree now!"
+			
+			// you can add a property to an object by doing something like this:
+
+				cat.bark = function(){
+					...
+				}
+
+			Make a variable named cat that is set to a new Tamagotchi. Add the following methods to it:
+			1. meow() - prints out "Meow!"
+			2. useLitterBox() - "Burried treasure!"
+		*/
+
+		//solution
+
+		var Tamagotchi = function(h, s, a) {
+		  this.hungry = h;
+		  this.sick = s;
+		  this.age = a;
+
+		  this.feed = function() {
+		    if(this.hungry === true) {
+		      console.log("That was yummy!");
+		      this.hungry = false;
+		    }
+		    else {
+		      console.log("No thanks, I'm full.");
+		      this.hungry = true;
+		    }
+		  };
+
+		  this.sleep = function() {
+		    console.log("zzzzzzzzzzzz");
+		  };
+
+		  this.medicate = function() {
+		    if(this.sick === true) {
+		      console.log("I feel much better");
+		      this.sick = false;
+		    }
+		    else {
+		      console.log("No thanks, I feel fine.");
+		      this.sick = true;
+		    }
+		  };
+
+		  this.increaseAge = function() {
+		    this.age ++;
+		    console.log("Happy Birthday to me! I am " + this.age +
+		    " years old!");
+		  };
+		};
+
+		var dog = new Tamagotchi(false, false, 0);
+		dog.bark = function() {
+		  console.log("ruff ruff!");
+		};
+
+		dog.goOutside = function() {
+		  console.log("I own that tree now!");
+		};
+
+		var cat = new Tamagotchi(false, false, 0);
+		cat.meow = function() {
+		  console.log("Meow!");
+		};
+
+		cat.useLitterBox = function() {
+		  console.log("Burried treasure!");
+		};
+
+		//Scope
+
+		//var hamsterName = 'chuck';
+
+		var feed = function(){
+			alert('I am feeding ' + hamsterName);
+		};
+
+		feed();
+
+		// in javascript scope goes up 
+
+		// in javascript variables declared inside functions live only inside the functions
+
+
+		var hamsterName = 'chuck';
+
+		var feed = function(){
+			hamsterName = 'scamper';
+		};
+
+		feed();
+
+		alert(hamsterName);
+
+
+
+
+			      
+			var name = "Steven Patrick Morrissey";
+
+			var scope1 = function () {
+				
+				console.log(name);
+				
+				var scope2 = function () {
+			  	
+			  		console.log(name);
+			  	
+			  		var scope3 = function () {
+			    		console.log(name);
+			    		var anotherName = 'Jakob Dylan'; // locally scoped
+			  		};
+			  	
+			  		scope3();
+				};
+				
+				scope2();
+			};
+
+			scope1();
+
+			alert(anotherName); //won't work
+
+
+			window.innerHeight
+		
+			window.innerWidth
+
+			var cats = 'I have them';
+
+			window.cats;
+
+			//when you make something global - meaning it's not inside of a function - it gets attached to the window object - which means it becomes a key, value pair inside the window object.
+
+			
 </script>
 </body>
 </html>
