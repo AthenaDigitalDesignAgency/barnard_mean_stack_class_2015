@@ -59,7 +59,7 @@
 	    	<div class="col-md-6 col-md-offset-4">
 
 	    		<div id="mainButtons">
-		    		<button data-tvshow="earth">1</button>
+		    		<button data-tvshow="earth" data-math="algebra">1</button>
 		    		<button data-tvshow="fire">2</button>
 		    		<button data-tvshow="wind">3</button>
 		    		<button data-tvshow="water">4</button>
@@ -86,7 +86,8 @@
 	<script type="text/javascript">
 		$( document ).ready(function() {
 
-			$('button').on('click', function(){
+			$(document).on('click', 'button', function(){
+			//$('button').on('click', function(){
 				var part = $(this).data('tvshow');
 
 				alert(part);
@@ -97,7 +98,7 @@
 
 				newButton.html("the tv show's name");
 
-				newButton.data('tvshow', 'Captain Planet!');
+				newButton.attr('data-tvshow', 'Captain Planet!');
 
 				newButton.appendTo( $('#mainButtons') );
 			});
